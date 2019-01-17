@@ -15,19 +15,6 @@ const Students = db.define("student", {
     validate: {
       isEmail: true
     }
-  },
-  age: {
-    type: Sequelize.FLOAT,
-    validate: {
-      min: 0.0,
-      max: 100.0
-    }
-  },
-  campusID: {
-    type: Sequelize.INTEGER,
-    validate: {
-      notEmpty: true
-    }
   }
 });
 

@@ -18,7 +18,7 @@ const seed = async function() {
     lastName: "Bernstein",
     email: "omri@gmail.com",
     campusID: 1,
-    age: "20"
+    age: 20
   }),
     Students.create({
       firstName: "Geoff",
