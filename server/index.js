@@ -1,7 +1,8 @@
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
-const db = require("./db");
+const { db } = require("./db");
+const Sequelize = require("sequelize");
 const seed = require("./db/seed");
 const pkg = require("../package.json");
 
@@ -18,9 +19,9 @@ app.use((req, res, next) => {
 
 app.listen(3000, async () => {
   console.log("Ready to listen");
-  //   try {
-  //     await db.sync();
-  //   } catch (error) {
-  //     console.log("Errrrrrrror", error);
-  //   }
+  try {
+    await db.sync();
+  } catch (error) {
+    console.log("Errrrrrrror", error);
+  }
 });
